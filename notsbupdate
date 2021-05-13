@@ -188,5 +188,5 @@ function main() {
   process_kernels
 
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then main "$@"; fi
-
+}
 # vim:set ts=2 sw=2 et:
