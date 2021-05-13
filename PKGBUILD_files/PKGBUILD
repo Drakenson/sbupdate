@@ -1,6 +1,4 @@
-# Maintainer: Andrey Vihrov <andrey.vihrov at gmail.com>
-
-pkgname=sbupdate-git
+pkgname=notsbupdate
 pkgver=0.r113.4e6d106
 pkgrel=1
 pkgdesc="Generate single file kernel images for EFI normal Boot - not secure!"
@@ -17,12 +15,12 @@ source=("git+https://github.com/drakenson/sbupdate.git")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd notsbupdate
+  cd sbupdate
   printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-  cd notsbupdate
+  cd sbupdate
   make DESTDIR="${pkgdir}" DOCDIR="/usr/share/doc/${pkgname}" install
 }
 
