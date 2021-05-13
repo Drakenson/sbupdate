@@ -120,7 +120,7 @@ function get_kernels() {
 # Return output file path corresponding to an image
 #   $1: image name
 function output_name() {
-  echo "${ESP_DIR}/${OUT_DIR}/$1-unsigned.efi"
+  echo "${ESP_DIR}/${OUT_DIR}/$1.efi"
 }
 
 # Remove a signed kernel image
