@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Remove
+Type = Path
+Target = usr/lib/modules/*/vmlinuz
+
+[Action]
+Description = Removing UEFI kernel images...
+When = PreTransaction
+Exec = /usr/bin/notsbupdate -k -r
+NeedsTargets
